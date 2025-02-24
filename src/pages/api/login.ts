@@ -4,11 +4,15 @@ import { serialize } from 'cookie';
 const CORRECT_PASSWORD = '0721';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log('Request method:', req.method);  // リクエストメソッドの確認
+  console.log('Request body:', req.body);      // リクエストボディの確認
+
   if (req.method !== 'POST') {
     return res.status(405).end();
   }
 
   const { password } = req.body;
+  console.log('Received password:', password);  // パスワードの確認
 
   if (password === CORRECT_PASSWORD) {
     // 認証用Cookieを設定
