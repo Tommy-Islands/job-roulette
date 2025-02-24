@@ -66,6 +66,10 @@ export default function Home() {
             <CasterRoleSelector ref={casterRef} onJobSelect={handleJobSelect} />
           </div>
         </div>
+
+        <div className="text-center text-gray-500 text-sm mt-8">
+          © SQUARE ENIX CO., LTD. All Rights Reserved.
+        </div>
       </div>
     </div>
   );
