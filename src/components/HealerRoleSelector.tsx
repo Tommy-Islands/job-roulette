@@ -41,7 +41,7 @@ export function HealerRoleSelector() {
         />
         <h2 className="text-[#fff] text-lg">HEALER</h2>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="flex justify-center gap-5">
         {HEALER_JOBS.map((job) => (
           <JobSelector
             key={job.label}

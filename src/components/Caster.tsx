@@ -1,24 +1,23 @@
 import { useState, useEffect } from 'react';
 import { JobSelector } from './JobSelector';
 
-const TANK_JOBS = [
-  { label: '戦士', icon: '/job/tank/Warrior.png' },
-  { label: '暗黒騎士', icon: '/job/tank/DarkKnight.png' },
-  { label: 'ナイト', icon: '/job/tank/Paladin.png' },
-  { label: 'ガンブレイカー', icon: '/job/tank/Gunbreaker.png' },
+const CASTER_JOBS = [
+  { label: '黒魔導士', icon: '/job/magicalrangedDPS/BlackMage.png' },
+  { label: '赤魔導士', icon: '/job/magicalrangedDPS/RedMage.png' },
+  { label: '召喚士', icon: '/job/magicalrangedDPS/Summoner.png' },
 ] as const;
 
-export function TankRoleSelector() {
+export function CasterRoleSelector() {
   const [selectedJobs, setSelectedJobs] = useState<string[]>([]);
   const [isRoleSelected, setIsRoleSelected] = useState(false);
 
   useEffect(() => {
-    setIsRoleSelected(selectedJobs.length === TANK_JOBS.length);
+    setIsRoleSelected(selectedJobs.length === CASTER_JOBS.length);
   }, [selectedJobs]);
 
   const handleRoleSelect = (selected: boolean) => {
     setIsRoleSelected(selected);
-    setSelectedJobs(selected ? TANK_JOBS.map(job => job.label) : []);
+    setSelectedJobs(selected ? CASTER_JOBS.map(job => job.label) : []);
   };
 
   const handleJobSelect = (jobLabel: string, selected: boolean) => {
@@ -31,18 +30,18 @@ export function TankRoleSelector() {
   };
 
   return (
-    <div className="bg-[#2a2829] p-6 rounded-lg">
+    <div className="bg-[#2a2829] p-6 rounded-lg mt-4 w-full">
       <div className="flex items-center gap-4 mb-4">
         <JobSelector
-          label="TANK"
-          icon="/role/TankRole.png"
+          label="CASTER"
+          icon="/role/DPSRole.png"
           isSelected={isRoleSelected}
           onChange={handleRoleSelect}
         />
-        <h2 className="text-[#fff] text-lg">TANK</h2>
+        <h2 className="text-[#fff] text-lg">CASTER</h2>
       </div>
       <div className="flex justify-center gap-5">
-        {TANK_JOBS.map((job) => (
+        {CASTER_JOBS.map((job) => (
           <JobSelector
             key={job.label}
             label={job.label}

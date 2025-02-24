@@ -26,7 +26,7 @@ export function JobSelector({ label, icon, isSelected = false, onChange }: JobSe
       onClick={handleClick}
       className={`
         relative
-        w-12 h-12
+        w-10 h-10 md:w-12 md:h-12
         border-2
         rounded-md
         transition-all
@@ -47,7 +47,7 @@ export function JobSelector({ label, icon, isSelected = false, onChange }: JobSe
           alt={label}
           width={36}
           height={36}
-          className="opacity-90 w-9 h-9 object-contain"
+          className="opacity-90 w-7 h-7 md:w-9 md:h-9 object-contain"
           unoptimized
         />
       </div>
