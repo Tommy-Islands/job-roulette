@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 // パスワードは環境変数で管理することを推奨
-const CORRECT_PASSWORD = 'your-password';
+// const CORRECT_PASSWORD = 'your-password';
 
 export function middleware(request: NextRequest) {
   const hasValidPassword = request.cookies.get('auth');
