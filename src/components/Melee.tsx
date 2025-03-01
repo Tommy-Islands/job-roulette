@@ -8,7 +8,7 @@ const MELEE_JOBS = [
   { label: '忍者', icon: '/job/meleeDPS/Ninja.png' },
   { label: 'リーパー', icon: '/job/meleeDPS/Reaper.png' },
   { label: '侍', icon: '/job/meleeDPS/Samurai.png' },
-  // { label: 'ヴァイパー', icon: '/job/meleeDPS/Viper.png' },
+  { label: 'ヴァイパー', icon: '/job/meleeDPS/Viper.png' },
 ] as const;
 
 export const MeleeRoleSelector = forwardRef<RoleRef, RoleSelectorProps>(

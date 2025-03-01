@@ -47,7 +47,7 @@ export function JobSelector({ label, icon, isSelected = false, onChange }: JobSe
           alt={label}
           width={36}
           height={36}
-          className="opacity-90 w-7 h-7 md:w-9 md:h-9 object-contain"
+          className="opacity-90 w-9 h-9 md:w-12 md:h-12 object-contain"
           unoptimized
         />
       </div>

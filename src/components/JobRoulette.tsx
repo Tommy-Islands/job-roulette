@@ -63,7 +63,7 @@ export function JobRoulette({ getSelectedJobs }: JobRouletteProps) {
                 className="w-24 h-24 object-contain"
                 unoptimized
               />
-              <span className="text-[#fff] text-lg">{currentJob.label}</span>
+              <span className="text-[#fff] text-base">{currentJob.label}</span>
             </>
           )}
         </div>
